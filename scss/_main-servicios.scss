@@ -1,0 +1,35 @@
+.accordion-button{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: large;
+}
+
+.accordion-body{
+    font-size: large;
+}
+
+.cardServicios{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 15rem;
+}
+.cardServicios .card{
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+.cardServicios .card img{
+height: 25rem;
+width: 25rem;
+}
+.img-fluid {
+    height: 200px;
+}
+
+
+@media screen and (max-width:543px){
+    .cardServicios .card img{
+        height: auto;
+        width: auto;
+        }
+}

@@ -1,0 +1,537 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+section {
+  margin-bottom: 10vh;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+nav {
+  background-color: rgb(197, 196, 196);
+  padding: 0.6rem;
+}
+
+li {
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 5px;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  margin: 1rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+nav ul li::before {
+  content: "";
+  height: 3px;
+  width: 0%;
+  background: rgb(32, 32, 32);
+  position: absolute;
+  left: 0;
+  bottom: 1.5px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+nav ul li:hover::before {
+  width: 100%;
+}
+
+.link-separado {
+  display: inline-block;
+  background-color: blueviolet;
+  padding: 0.5rem;
+  border-radius: 5px;
+  position: absolute;
+  top: 0.7rem;
+  left: 0.5rem;
+}
+
+body {
+  background-color: #E7EBEE;
+}
+
+.Banner {
+  background: url(../img/camilla.jpeg) fixed center/cover;
+  height: 50rem;
+  width: 40;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 10rem;
+}
+
+.banner::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: aquamarine;
+  opacity: 0.8;
+}
+
+.banner-info {
+  padding: 0.3rem;
+  position: absolute;
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+  margin: auto;
+}
+
+.titulo-banner {
+  font-family: "Roboto Mono", monospace;
+  line-height: 1.5;
+  font-size: 3rem;
+}
+
+.banner-p {
+  line-height: 2rem;
+  font-size: 8rem;
+  font-family: sans-serif;
+}
+
+.mainInicio .grid .texto2 {
+  font-family: "Noto Sans", sans-serif;
+  font-size: larger;
+}
+
+.mainInicio .grid .parrafomedio {
+  font-family: "Inconsolata", monospace;
+  font-size: medium;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  gap: 2% 0%;
+  grid-auto-flow: row;
+  grid-template-areas: "texto texto2 texto3" "parrafoabajo1 parrafoabajo2 parrafoabajo" "cardmain1 cardmain2 cardmain3";
+  justify-items: center;
+}
+
+.texto {
+  grid-area: texto;
+}
+
+.texto2 {
+  grid-area: texto2;
+}
+
+.texto3 {
+  grid-area: texto3;
+}
+
+.cardmain1 {
+  grid-area: cardmain1;
+}
+
+.cardmain2 {
+  grid-area: cardmain2;
+}
+
+.cardmain3 {
+  grid-area: cardmain3;
+}
+
+.parrafoabajo1 {
+  grid-area: parrafoabajo1;
+}
+
+.parrafoabajo2 {
+  grid-area: parrafoabajo2;
+}
+
+@media screen and (max-width: 1450px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    grid-template-areas: "... ... texto2" "... ... parrafoabajo2" "... ... cardmain1" "... ... cardmain2" "... ... cardmain3";
+  }
+}
+@media screen and (max-width: 537px) {
+  .grid {
+    grid-template-rows: 1fr;
+    justify-items: center;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    grid-template-areas: "... ... texto2" "... ... parrafoabajo2" "... ... cardmain1" "... ... cardmain2" "... ... cardmain3";
+  }
+}
+.pie-pagina {
+  background-color: #E7EBEE;
+  width: 100%;
+  background: color black;
+}
+
+.pie-pagina .grupo-1 {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0px;
+}
+
+.pie-pagina .grupo-1 .box figure {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure img {
+  width: 15rem;
+}
+
+.pie-pagina .grupo-1 .box .botondecontacto {
+  color: black;
+  margin-bottom: 5rem;
+  font-size: 2.5rem;
+}
+
+.Footerlistado {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.red-social a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  margin-right: 10px;
+  background-color: #0d2033;
+  text-align: center;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.pie-pagina .grupo-1 .box .red-social a:hover {
+  color: aqua;
+}
+
+.pie-pagina .grupo-2 {
+  background-color: #0a1a2a;
+  padding: 15px 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.pie-pagina.grupo-2 small {
+  font-size: 13px;
+}
+
+@media screen and (max-width: 800px) {
+  .pie-pagina .grupo-1 {
+    width: 50%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
+  }
+}
+@media screen and (max-width: 585px) {
+  .pie-pagina {
+    width: 100%;
+    margin: 0;
+  }
+  .pie-pagina .grupo-2 small {
+    font-size: 10px;
+    width: auto;
+    margin: 0%;
+  }
+}
+.Contactenos__banner {
+  background: url(../img/sal.jpg) fixed center/cover;
+  height: 50rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.Contactenos__banner .titulos-contactenos {
+  position: relative;
+  top: 3px;
+}
+
+.botonContacto {
+  font-size: medium;
+}
+
+.accordion-button {
+  font-family: "Noto Sans", sans-serif;
+  font-size: large;
+}
+
+.accordion-body {
+  font-size: large;
+}
+
+.cardServicios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 15rem;
+}
+
+.cardServicios .card {
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.cardServicios .card img {
+  height: 25rem;
+  width: 25rem;
+}
+
+.img-fluid {
+  height: 200px;
+}
+
+@media screen and (max-width: 543px) {
+  .cardServicios .card img {
+    height: auto;
+    width: auto;
+  }
+}
+.sobreNosotros {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.sobreNosotros h2 {
+  margin: 2rem;
+  font-size: 4.5rem;
+  font-family: "Inconsolata", monospace;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sobreNosotros p {
+  margin: 2rem;
+  font-size: 2.5rem;
+}
+
+.mapa h3 {
+  margin: 1rem;
+  font-size: 3.5rem;
+}
+
+.mapa {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+  .sobreNosotros h2 {
+    font-size: 3.5rem;
+  }
+  .sobreNosotros p {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 537px) {
+  .sobreNosotros h2 {
+    font-size: 2.5rem;
+  }
+  .sobreNosotros p {
+    font-size: 1.5rem;
+  }
+}
+.Fondo__Nosotros {
+  background: url(../img/equipos.jpg) fixed center/cover;
+  height: 50rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Nosotros__Titulo {
+  padding: 5rem;
+  width: 10rem;
+  height: 2rem;
+  font-size: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  position: relative;
+  left: 20rem;
+  top: -11.5rem;
+}
+
+.Nosotros__parrafo {
+  font-size: 1.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin: 0rem;
+  position: relative;
+  right: 11rem;
+  top: 3rem;
+}
+
+.carousel-inner img {
+  width: 100%;
+  max-height: 950px;
+}
+
+.carousel-inner {
+  height: 950px;
+}
+
+@media (max-width: 767.98px) {
+  .carousel-inner img {
+    width: 100%;
+    max-height: 500px;
+  }
+  .carousel-inner {
+    height: 500px;
+  }
+}
+@media (max-width: 575.98px) {
+  .carousel-inner img {
+    max-height: 300px;
+  }
+  .carousel-inner {
+    height: 300px;
+  }
+}
+@media (max-width: 575.98px) {
+  .pie-pagina {
+    max-width: 480px;
+  }
+  .pie-pagina .box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/* variables */
+/* Main Header */
+/*Main Body */
+/*Footer */
+/*Main Contacto */
+/*Main Servicios */
+/*Main Nosotros */
+/*Responsive */
+.contenedor-404 {
+  background-color: white;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.contenedor-404 img {
+  width: 25%;
+}
+.contenedor-404 p {
+  font-size: 3rem;
+}

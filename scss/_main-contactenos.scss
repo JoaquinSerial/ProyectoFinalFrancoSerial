@@ -1,0 +1,17 @@
+.Contactenos__banner {
+    background: url(../img/sal.jpg) fixed center/cover;
+    height: 50rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .titulos-contactenos{
+        position: relative;
+        top: 3px;
+        
+    }
+}
+.botonContacto{
+    font-size: medium;
+}
+

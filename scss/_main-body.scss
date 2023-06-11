@@ -1,0 +1,140 @@
+body {
+    background-color: #E7EBEE;
+}
+
+.Banner {
+    background: url(../img/camilla.jpeg)fixed center/cover;
+    height: 50rem;
+    width: 40;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10rem;
+}
+
+.banner::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: aquamarine;
+    opacity: 0.8;
+}
+
+.banner-info {
+    padding: 0.3rem;
+    position: absolute;
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    margin: auto;
+}
+
+.titulo-banner {
+    font-family: 'Roboto Mono', monospace;
+    line-height: 1.5;
+    font-size: 3rem;
+}
+
+.banner-p {
+    line-height: 2rem;
+    font-size: 8rem;
+    font-family: sans-serif;
+}
+
+.mainInicio .grid .texto2 {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: larger;
+}
+
+
+
+.mainInicio .grid .parrafomedio {
+    font-family: 'Inconsolata', monospace;
+    font-size: medium;
+}
+
+
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 2% 0%;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "texto texto2 texto3"
+        "parrafoabajo1 parrafoabajo2 parrafoabajo"
+        "cardmain1 cardmain2 cardmain3";
+    justify-items: center;
+}
+
+.texto {
+    grid-area: texto;
+}
+
+.texto2 {
+    grid-area: texto2;
+}
+
+.texto3 {
+    grid-area: texto3;
+}
+
+.cardmain1 {
+    grid-area: cardmain1;
+}
+
+.cardmain2 {
+    grid-area: cardmain2;
+}
+
+.cardmain3 {
+    grid-area: cardmain3;
+}
+
+.parrafoabajo1 {
+    grid-area: parrafoabajo1;
+}
+
+.parrafoabajo2 {
+    grid-area: parrafoabajo2;
+}
+
+@media screen and (max-width: 1450px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        justify-items: center;
+        text-align: center;
+        justify-content: center;
+
+        grid-template-areas:
+            "... ... texto2"
+            "... ... parrafoabajo2"
+            "... ... cardmain1"
+            "... ... cardmain2"
+            "... ... cardmain3";
+
+    }
+}
+
+
+@media screen and (max-width: 537px) {
+    .grid {
+
+        grid-template-rows: 1fr;
+        justify-items: center;
+        text-align: center;
+        justify-content: center;
+
+        grid-template-areas:
+            "... ... texto2"
+            "... ... parrafoabajo2"
+            "... ... cardmain1"
+            "... ... cardmain2"
+            "... ... cardmain3";
+
+    }
+}
